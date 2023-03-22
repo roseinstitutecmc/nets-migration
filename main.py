@@ -68,7 +68,7 @@ def main():
     print('Now reading file to DataFrame...')
     df_start_time = time.time()
 
-    dta_df, meta = pyreadstat.read_dta(filename)'
+    dta_df, meta = pyreadstat.read_dta(filename)
 
     print('Done reading to DataFrame!')
 
