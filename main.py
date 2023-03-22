@@ -7,12 +7,6 @@ import pyreadstat
 import sys
 import time
 
-
-from dotenv import load_dotenv
-
-load_dotenv()
-
-
 # Retrieve Job-defined env vars
 TASK_INDEX = os.getenv("CLOUD_RUN_TASK_INDEX", 0)
 TASK_ATTEMPT = os.getenv("CLOUD_RUN_TASK_ATTEMPT", 0)
