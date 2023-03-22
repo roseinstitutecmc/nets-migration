@@ -55,7 +55,7 @@ def main():
 
     print('file downloaded from box with name', filename)
     dl_end_time = time.time()
-    dl_time = dl_start_time - dl_end_time
+    dl_time = dl_end_time - dl_start_time
     print('Download took these many seconds:', dl_time)
 
     print('Now reading file to DataFrame...')
@@ -66,7 +66,7 @@ def main():
     print('Done reading to DataFrame!')
 
     df_end_time = time.time()
-    df_time = df_start_time - df_end_time
+    df_time = df_end_time - df_start_time 
     print('Converting took these many seconds:', df_time)
 
     print('Size of dta_df=      ', dta_df.__sizeof__())
