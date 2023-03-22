@@ -1,9 +1,13 @@
 from boxsdk import Client, OAuth2
 from google.cloud import bigquery
-import io
 import pandas as pd
+import pyreadstat
 import time
 
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Box Client
 auth = OAuth2(
@@ -38,7 +42,11 @@ try:
     # From https://github.com/box/box-python-sdk/blob/main/docs/usage/files.md#download-a-file
     print('Downloading from Box...')
     dl_start_time = time.time()
-    file_content = boxclient.file(file_id).content()
+    
+    filename = boxclient.file(file_id).get().name
+    # Write the Box file contents to disk
+    output_file = open(filename, 'wb')
+    boxclient.file(file_id).download_to(output_file)
 except BoxAPIException as box_exception:
     print('You not authed with box lol')
     print(box_excpetion)
@@ -52,8 +60,7 @@ print('Download took these many seconds:', dl_time)
 print('Now reading file to DataFrame...')
 df_start_time = time.time()
 
-
-dta_df = pd.read_stata(io.BytesIO(file_content))
+dta_df, meta = pyreadstat.read_dta(filename)'
 
 print('Done reading to DataFrame!')
 
@@ -63,13 +70,10 @@ print('Converting took these many seconds:', df_time)
 
 
 
-print('Size of file_content=', file_content.__sizeof__())
 print('Size of dta_df=      ', dta_df.__sizeof__())
 
 print('Shape o dta_df=', dta_df.shape)
 
 print('dta_df head=\n', dta_df.head())
 
-
-
-
+print('This is where df should be uploaded to BigQuery')
