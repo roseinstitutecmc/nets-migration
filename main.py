@@ -3,6 +3,7 @@ from boxsdk.exception import BoxAPIException
 from google.cloud import bigquery
 import json
 import os
+import psutil
 import pyreadstat
 import sys
 import time
@@ -15,7 +16,14 @@ TASK_ATTEMPT = os.getenv("CLOUD_RUN_TASK_ATTEMPT", 0)
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", 0)
 
 
+def log_memory_usage(when):
+    process = psutil.Process(os.getpid())
+    mem_info = process.memory_info()
+    print(f"Memory usage {when}: {mem_info.rss / (1024 * 1024)} MB")
+
+
 def main():
+    log_memory_usage('Initial')
     # Box Client
     auth = OAuth2(
         client_id='YOUR_CLIENT_ID',
@@ -58,7 +66,9 @@ def main():
     dl_end_time = time.time()
     dl_time = dl_end_time - dl_start_time
     print('Download took these many seconds:', dl_time)
-
+    
+    log_memory_usage('Downloaded')
+    
     print('Now reading file to DataFrame...')
     df_start_time = time.time()
 
