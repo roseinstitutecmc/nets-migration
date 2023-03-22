@@ -3,8 +3,9 @@ from boxsdk.exception import BoxAPIException
 from google.cloud import bigquery
 import json
 import os
+import pandas as pd
 import psutil
-import pyreadstat
+#import pyreadstat
 import sys
 import time
 import traceback
@@ -72,8 +73,17 @@ def main():
     print('Now reading file to DataFrame...')
     df_start_time = time.time()
 
-    fpath = filename
-    reader = pyreadstat.read_file_in_chunks(pyreadstat.read_dta, fpath, chunksize=10000)
+    chunks = pd.read_stata(filename, chunksize=100000)
+    header = True
+    i = 0
+    for chunk in chunks:
+        chunk.to_csv((f'{filename}.csv'), header=header, mode='a')
+        header = False
+        log_memory_usage(f"Chunk {i}")
+        i += 1
+
+    '''
+    reader = pyreadstat.read_file_in_chunks(pyreadstat.read_dta, filename, chunksize=10000)
     header = True
     i = 0
     for df, meta in reader:
@@ -82,6 +92,7 @@ def main():
         header = False
         log_memory_usage(f"Chunk {i}")
         i += 1
+    '''
 
     print('Done reading to DataFrame to csv!')
 
