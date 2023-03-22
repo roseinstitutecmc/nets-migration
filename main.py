@@ -73,12 +73,15 @@ def main():
     df_start_time = time.time()
 
     fpath = filename
-    reader = pyreadstat.read_file_in_chunks(pyreadstat.read_dta, fpath, chunksize=100000)
+    reader = pyreadstat.read_file_in_chunks(pyreadstat.read_dta, fpath, chunksize=10000)
     header = True
+    i = 0
     for df, meta in reader:
-        # df will contain 100K rows
+        # df will contain 10K rows
         df.to_csv((f'{filename}.csv'), header=header, mode='a')
         header = False
+        log_memory_usage(f"Chunk {i}")
+        i += 1
 
     print('Done reading to DataFrame to csv!')
 
