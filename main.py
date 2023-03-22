@@ -6,6 +6,7 @@ import os
 import pyreadstat
 import sys
 import time
+import traceback
 
 # Retrieve Job-defined env vars
 TASK_INDEX = os.getenv("CLOUD_RUN_TASK_INDEX", 0)
@@ -85,6 +86,7 @@ if __name__ == "__main__":
     except Exception as err:
         message = f"Task #{TASK_INDEX}, " \
                   + f"Attempt #{TASK_ATTEMPT} failed: {str(err)}"
+        traceback.print_exc()  # Prints the full traceback of the exception
 
         print(json.dumps({"message": message, "severity": "ERROR"}))
         sys.exit(1)  # Retry Job Task by exiting the process
