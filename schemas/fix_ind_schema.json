@@ -1,0 +1,167 @@
+[
+    {
+      "mode": "NULLABLE",
+      "name": "dunsnumber",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "moveyear",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "company",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "tradename",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "movesic",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "originaddress",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "origincity",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "originstate",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "originzip",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "originfipscounty",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "origincounty",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destaddress",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destcity",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "deststate",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destzip",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destfipscounty",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destcounty",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "moveemp",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "empc",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "movesales",
+      "type": "FLOAT"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "movesalesc",
+      "type": "INTEGER"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "moveoften",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "active",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "sizecat",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "estcat",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "subsidiary",
+      "type": "BOOLEAN"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "originlatitude",
+      "type": "FLOAT"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "originlongitude",
+      "type": "FLOAT"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "originlevelcode",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destlatitude",
+      "type": "FLOAT"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destlongitude",
+      "type": "FLOAT"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "destlevelcode",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "distance",
+      "type": "FLOAT"
+    }
+  ]

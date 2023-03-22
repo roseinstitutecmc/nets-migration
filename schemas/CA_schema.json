@@ -1,0 +1,2032 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "dunsnumber",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "state",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating90",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales90",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics90",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating91",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales91",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics91",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating92",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales92",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics92",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating93",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales93",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics93",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating94",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales94",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics94",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating95",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales95",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics95",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating96",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales96",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics96",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating97",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales97",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics97",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating98",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales98",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics98",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating99",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales99",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics99",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating00",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales00",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics00",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating01",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales01",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics01",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating02",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales02",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics02",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating03",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales03",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics03",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating04",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales04",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics04",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating05",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales05",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics05",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating06",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales06",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics06",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating07",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales07",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics07",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating08",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales08",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics08",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating09",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales09",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics09",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating10",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales10",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics10",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating11",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales11",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics11",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating12",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales12",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics12",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating13",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales13",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics13",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating14",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales14",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics14",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating15",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales15",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics15",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating16",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales16",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics16",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating17",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales17",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics17",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating18",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales18",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics18",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emp19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sic19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fips19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmin19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "paydexmax19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dnbrating19",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales19",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesc19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "naics19",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "company",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tradename",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "address",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "city",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "zipcode",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "zip4",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "officer",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "title",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "area",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "phone",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "region",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqdunschange",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fipschange",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "outofbis",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "yearstart",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "saleshere",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesherec",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesgrowth",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "salesgrowthpeer",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "moveyears",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "lastmove",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "movesic4",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "origincity",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "originstate",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "originzip",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "moveemp",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empc",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "movesales",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "movesalesc",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pubpriv",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "legalstat",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "foreignown",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "impexpind",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "govtcontra",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "minority",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "genderceo",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "womenowned",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "relocate",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "moveoften",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cottage",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "firstyear",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "lastyear",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "address_first",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "city_first",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "state_first",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "zipcode_first",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cbsa_first",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fipscounty_first",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "citycode_first",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqduns",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqcompany",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqtradename",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqaddress",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqcity",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqstate",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqzipcode",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqzip4",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqofficer",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqtitle",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqarea",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hqphone",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "subsidiary",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "related",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kids",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cbsa",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fipscounty",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "citycode",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "latitude",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "longitude",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "levelcode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "estcat",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emphere",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "empherec",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sizecat",
+    "type": "STRING"
+  }
+]

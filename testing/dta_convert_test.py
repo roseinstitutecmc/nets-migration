@@ -1,0 +1,75 @@
+from boxsdk import Client, OAuth2
+from google.cloud import bigquery
+import io
+import pandas as pd
+import time
+
+
+# Box Client
+auth = OAuth2(
+    client_id='YOUR_CLIENT_ID',
+    client_secret='YOUR_CLIENT_SECRET',
+    access_token=os.getenv("ACCESS_TOKEN", 0)
+)
+boxclient = Client(auth)
+
+# Big Query Client
+bqclient = bigquery.Client()
+project_id = 'rosenets'
+
+
+sql = """
+SELECT *
+FROM `rosenets.nets_import.index`
+WHERE start_id IS NULL AND add_time IS NOT NULL
+LIMIT 1
+"""
+
+
+# Run a Standard SQL query with the project set explicitly
+query_df = bqclient.query(sql, project=project_id).to_dataframe()
+
+print("query_df['file_id']=", query_df['file_id'][0])
+
+file_id = query_df['file_id'][0] 
+
+
+try:
+    # From https://github.com/box/box-python-sdk/blob/main/docs/usage/files.md#download-a-file
+    print('Downloading from Box...')
+    dl_start_time = time.time()
+    file_content = boxclient.file(file_id).content()
+except BoxAPIException as box_exception:
+    print('You not authed with box lol')
+    print(box_excpetion)
+
+print('file downloaded from box with size ', file_content.__sizeof__())
+dl_end_time = time.time()
+dl_time = dl_start_time - dl_end_time
+print('Download took these many seconds:', dl_time)
+
+
+print('Now reading file to DataFrame...')
+df_start_time = time.time()
+
+
+dta_df = pd.read_stata(io.BytesIO(file_content))
+
+print('Done reading to DataFrame!')
+
+df_end_time = time.time()
+df_time = df_start_time - df_end_time
+print('Converting took these many seconds:', df_time)
+
+
+
+print('Size of file_content=', file_content.__sizeof__())
+print('Size of dta_df=      ', dta_df.__sizeof__())
+
+print('Shape o dta_df=', dta_df.shape)
+
+print('dta_df head=\n', dta_df.head())
+
+
+
+
