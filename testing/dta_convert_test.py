@@ -42,7 +42,7 @@ try:
     # From https://github.com/box/box-python-sdk/blob/main/docs/usage/files.md#download-a-file
     print('Downloading from Box...')
     dl_start_time = time.time()
-    
+
     filename = boxclient.file(file_id).get().name
     # Write the Box file contents to disk
     output_file = open(filename, 'wb')

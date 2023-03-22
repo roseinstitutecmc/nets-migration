@@ -1,2 +1,3 @@
 google-cloud-bigquery==3.4.2
 boxsdk==3.6.2
+pyreadstat==1.2.1
