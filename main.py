@@ -66,27 +66,27 @@ def main():
     dl_end_time = time.time()
     dl_time = dl_end_time - dl_start_time
     print('Download took these many seconds:', dl_time)
-    
+
     log_memory_usage('Downloaded')
-    
+
     print('Now reading file to DataFrame...')
     df_start_time = time.time()
 
-    dta_df, meta = pyreadstat.read_dta(filename)
+    fpath = filename
+    reader = pyreadstat.read_file_in_chunks(pyreadstat.read_dta, fpath, chunksize=100000)
+    header = True
+    for df, meta in reader:
+        # df will contain 100K rows
+        df.to_csv((f'{filename}.csv'), header=header, mode='a')
+        header = False
 
-    print('Done reading to DataFrame!')
+    print('Done reading to DataFrame to csv!')
 
     df_end_time = time.time()
-    df_time = df_end_time - df_start_time 
+    df_time = df_end_time - df_start_time
     print('Converting took these many seconds:', df_time)
 
-    print('Size of dta_df=      ', dta_df.__sizeof__())
-
-    print('Shape o dta_df=', dta_df.shape)
-
-    print('dta_df head=\n', dta_df.head())
-
-    print('This is where df should be uploaded to BigQuery')
+    print('This is where csv should be uploaded to BigQuery')
 
 
 # Start script
