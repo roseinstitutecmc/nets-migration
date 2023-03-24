@@ -163,7 +163,10 @@ def main():
         # Convert the specified columns from float to int
         for col in int_columns:
             if col in chunk.columns:
-                chunk[col] = chunk[col].astype(int)
+                # Replace NaN with placeholder value -1 so can convert col to int
+                chunk[col] = chunk[col].fillna(-1).astype(int)
+        # Replace placeholder with NaN
+        chunk = chunk.replace(-1, np.nan, inplace=True)
         print(f'Converted Chunk {i}:')
         print(chunk.head(5))
         # Process the chunk and write it to the CSV file
