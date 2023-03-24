@@ -1,6 +1,5 @@
 from boxsdk import Client, OAuth2
 from boxsdk.exception import BoxAPIException
-import csv
 from google.cloud import bigquery
 import json
 import math
@@ -102,14 +101,6 @@ def main():
     LIMIT 1
     """
 
-    # TEMP TODO REMOVE
-    sql = """
-    SELECT *
-    FROM `rosenets.nets_import.index`
-    WHERE path = 'NETS_var_CA_00.dta'
-    LIMIT 1
-    """
-
 
     # Run a Standard SQL query with the project set explicitly
     query_df = bqclient.query(sql, project=project_id).to_dataframe()
@@ -124,6 +115,15 @@ def main():
     SET start_id = {VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}, start_time = {math.floor(time.time())}
     WHERE file_id = {file_id} AND add_time IS NOT NULL
     """
+
+    update_begin_job = bqclient.query(update_begin_sql, project=project_id)
+
+    # Wait for job to finish
+    update_begin_job.result()
+
+    assert update_begin_job.num_dml_affected_rows is not None
+
+    print(f"DML update_begin query modified {update_begin_job.num_dml_affected_rows} rows.")
 
     try:
         # From https://github.com/box/box-python-sdk/blob/main/docs/usage/files.md#download-a-file
@@ -220,6 +220,22 @@ def main():
             table.num_rows, len(table.schema), table_id
         )
     )
+
+    # Update the index with finished process
+    update_finish_sql = f"""
+    UPDATE `rosenets.nets_import.index`
+    SET end_id = {VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}, end_time = {math.floor(time.time())}
+    WHERE file_id = {file_id} AND add_time IS NOT NULL
+    """
+
+    update_finish_job = bqclient.query(update_finish_sql, project=project_id)
+
+    # Wait for job to finish
+    update_finish_job.result()
+
+    assert update_finish_job.num_dml_affected_rows is not None
+
+    print(f"DML update_finish query modified {update_finish_job.num_dml_affected_rows} rows.")
 
 
 # Start script
