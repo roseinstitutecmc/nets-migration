@@ -4,6 +4,7 @@ import csv
 from google.cloud import bigquery
 import json
 import math
+import numpy as np
 import os
 import pandas as pd
 import psutil
@@ -157,10 +158,12 @@ def main():
         # Get the column names from the first chunk
         if header_columns is None:
             header_columns = list(chunk.columns)
+        # Replace all values of '.' with NaN
+        chunk = chunk.replace('.', np.nan)
         # Convert the specified columns from float to int
         for col in int_columns:
             if col in chunk.columns:
-                chunk[col] = chunk[col].fillna(0).astype(float).round().astype(int)
+                chunk[col] = chunk[col].astype(int)
         print(f'Converted Chunk {i}:')
         print(chunk.head(5))
         # Process the chunk and write it to the CSV file
