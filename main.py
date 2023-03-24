@@ -166,7 +166,7 @@ def main():
                 # Replace NaN with placeholder value -1 so can convert col to int
                 chunk[col] = chunk[col].fillna(-1).astype(int)
         # Replace placeholder with NaN
-        chunk = chunk.replace(-1, np.nan, inplace=True)
+        chunk = chunk.replace(-1, np.nan)
         print(f'Converted Chunk {i}:')
         print(chunk.head(5))
         # Process the chunk and write it to the CSV file
