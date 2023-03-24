@@ -148,7 +148,7 @@ def main():
         # Convert the specified columns from float to int
         for col in int_columns:
             if col in chunk.columns:
-                chunk[col] = chunk[col].fillna(0).astype(int)
+                chunk[col] = chunk[col].fillna(0).round().astype(int)
         # Process the chunk and write it to the CSV file
         chunk.to_csv((f'{filename}.csv'), header=header, mode='a', index=False)
         header = False
