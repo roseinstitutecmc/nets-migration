@@ -44,6 +44,15 @@ def main():
     LIMIT 1
     """
 
+    # TEMP TODO REMOVE
+    sql = """
+    SELECT *
+    FROM `rosenets.nets_import.index`
+    WHERE path = 'NETS_var_CA_00.dta'
+    LIMIT 1
+    """
+
+
     # Run a Standard SQL query with the project set explicitly
     query_df = bqclient.query(sql, project=project_id).to_dataframe()
 
