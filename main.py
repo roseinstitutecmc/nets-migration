@@ -145,7 +145,7 @@ def main():
     header = True
     i = 0
     for chunk in chunks:
-        chunk.to_csv((f'{filename}.csv'), header=header, mode='a')
+        chunk.to_csv((f'{filename}.csv'), header=header, mode='a', index=False)
         header = False
         log_memory_usage(f"Chunk {i}")
         i += 1
@@ -212,8 +212,7 @@ def main():
     with open(schema_path, 'r') as f:
         schema_json = json.load(f)
         # Iterate through varnames
-        # Start at index 1 to skip row number column
-        for varname in csv_header[1:]:
+        for varname in csv_header:
             vartype = [item['type'] for item in schema_json if item['name'] == varname][0]
             
             # Catch missing varname
