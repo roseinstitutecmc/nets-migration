@@ -112,8 +112,8 @@ def main():
     # Update the index with the in-progress process
     update_begin_sql = f"""
     UPDATE `rosenets.nets_import.index`
-    SET start_id = {VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}, start_time = {math.floor(time.time())}
-    WHERE file_id = {file_id} AND add_time IS NOT NULL
+    SET start_id = '{VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}', start_time = {math.floor(time.time())}
+    WHERE file_id = '{file_id}' AND add_time IS NOT NULL
     """
 
     update_begin_job = bqclient.query(update_begin_sql, project=project_id)
@@ -224,8 +224,8 @@ def main():
     # Update the index with finished process
     update_finish_sql = f"""
     UPDATE `rosenets.nets_import.index`
-    SET end_id = {VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}, end_time = {math.floor(time.time())}
-    WHERE file_id = {file_id} AND add_time IS NOT NULL
+    SET end_id = '{VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}', end_time = {math.floor(time.time())}
+    WHERE file_id = '{file_id}' AND add_time IS NOT NULL
     """
 
     update_finish_job = bqclient.query(update_finish_sql, project=project_id)
