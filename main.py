@@ -142,13 +142,17 @@ def main():
     header_columns = None
     i = 0
     for chunk in chunks:
+        print(f'Original Chunk {i}:')
+        print(chunk.head(5))
         # Get the column names from the first chunk
         if header_columns is None:
             header_columns = list(chunk.columns)
         # Convert the specified columns from float to int
         for col in int_columns:
             if col in chunk.columns:
-                chunk[col] = chunk[col].fillna(0).round().astype(int)
+                chunk[col] = chunk[col].fillna(0).astype(float).round().astype(int)
+        print(f'Converted Chunk {i}:')
+        print(chunk.head(5))
         # Process the chunk and write it to the CSV file
         chunk.to_csv((f'{filename}.csv'), header=header, mode='a', index=False)
         header = False
