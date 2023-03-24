@@ -17,6 +17,8 @@ TASK_INDEX = os.getenv("CLOUD_RUN_TASK_INDEX", 0)
 TASK_ATTEMPT = os.getenv("CLOUD_RUN_TASK_ATTEMPT", 0)
 # Retrieve User-defined env vars
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", 0)
+# Set version
+VERSION = 'v0.0'
 
 # Specify INT columns
 with open('schemas/fix_ind_schema.json', 'r') as f:
@@ -113,6 +115,13 @@ def main():
     print("query_df['file_id']=", query_df['file_id'][0])
 
     file_id = query_df['file_id'][0]
+
+    # Update the index with the in-progress process
+    update_begin_sql = f"""
+    UPDATE `rosenets.nets_import.index`
+    SET start_id = {VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}, start_time = {floor(time.time())}
+    WHERE file_id = {file_id} AND add_time IS NOT NULL
+    """
 
     try:
         # From https://github.com/box/box-python-sdk/blob/main/docs/usage/files.md#download-a-file
