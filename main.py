@@ -158,15 +158,17 @@ def main():
         # Get the column names from the first chunk
         if header_columns is None:
             header_columns = list(chunk.columns)
-        # Replace all values of '.' with NaN
-        chunk = chunk.replace('.', np.nan)
         # Convert the specified columns from float to int
         for col in int_columns:
             if col in chunk.columns:
+                # Replace all values of '.' with NaN if int column
+                chunk[col] = chunk[col].replace('.', np.nan)
                 # Replace NaN with placeholder value -1 so can convert col to int
                 chunk[col] = chunk[col].fillna(-1).astype(pd.Int64Dtype())
         # Replace placeholder with NaN
         chunk = chunk.replace(-1, np.nan)
+        # Replace remaining '.' values with empty string
+        chunk = chunk.replace('.', '')
         print(f'Converted Chunk {i}:')
         print(chunk.head(5))
         # Process the chunk and write it to the CSV file
