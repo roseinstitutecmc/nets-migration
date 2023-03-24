@@ -130,6 +130,7 @@ def main():
     print("Header (Column Names):", csv_header)
 
     schema = []
+    schema_print = []
 
     # Check schema type
     if 'fix_ind' in filename:
@@ -159,8 +160,9 @@ def main():
             ]
             '''
             schema.append(bigquery.SchemaField(varname, vartype))
+            schema_print.append(varname, vartype)
 
-    print('Schema is: ', schema)
+    print('Schema is: ', schema_print)
 
 
     job_config = bigquery.LoadJobConfig(
