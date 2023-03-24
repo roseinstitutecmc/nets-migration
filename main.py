@@ -164,7 +164,7 @@ def main():
                 # Replace all values of '.' with NaN if int column
                 chunk[col] = chunk[col].replace('.', np.nan)
                 # Replace NaN with placeholder value -1 so can convert col to int
-                chunk[col] = chunk[col].fillna(-1).astype(pd.Int64Dtype())
+                chunk[col] = chunk[col].fillna(-1).astype(float).astype(pd.Int64Dtype())
         # Replace placeholder with NaN
         chunk = chunk.replace(-1, np.nan)
         # Replace remaining '.' values with empty string
