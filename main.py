@@ -3,6 +3,7 @@ from boxsdk.exception import BoxAPIException
 import csv
 from google.cloud import bigquery
 import json
+import math
 import os
 import pandas as pd
 import psutil
@@ -119,7 +120,7 @@ def main():
     # Update the index with the in-progress process
     update_begin_sql = f"""
     UPDATE `rosenets.nets_import.index`
-    SET start_id = {VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}, start_time = {floor(time.time())}
+    SET start_id = {VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}, start_time = {math.floor(time.time())}
     WHERE file_id = {file_id} AND add_time IS NOT NULL
     """
 
