@@ -90,8 +90,13 @@ def main():
 
     chunks = pd.read_stata(filename, chunksize=100000)
     header = True
+    header_columns = None
     i = 0
     for chunk in chunks:
+        # Get the column names from the first chunk
+        if header_columns is None:
+            header_columns = list(chunk.columns)
+        # Process the chunk and write it to the CSV file
         chunk.to_csv((f'{filename}.csv'), header=header, mode='a', index=False)
         header = False
         log_memory_usage(f"Chunk {i}")
@@ -123,16 +128,8 @@ def main():
 
     # Manually specify schema
 
-    # Open the CSV file
-    with open(f'{filename}.csv', 'r') as f:
-        # Create a CSV reader object
-        csv_reader = csv.reader(f)
-
-        # Read the header (first row) to get the column names
-        csv_header = next(csv_reader)
-
     # Print the header (column names)
-    print("Header (Column Names):", csv_header)
+    print("Header (Column Names):", header_columns)
 
     schema = []
     schema_print = []
@@ -147,7 +144,7 @@ def main():
     with open(schema_path, 'r') as f:
         schema_json = json.load(f)
         # Iterate through varnames
-        for varname in csv_header:
+        for varname in header_columns:
             vartype = [item['type'] for item in schema_json if item['name'] == varname][0]
             
             # Catch missing varname
