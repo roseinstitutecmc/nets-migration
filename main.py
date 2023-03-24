@@ -108,6 +108,20 @@ def main():
     table_id = f"rosenets.nets_import.{filename.split('.')[0]}"
 
     # Manually specify schema
+
+    # Open the CSV file
+    with open(f'{filename}.csv', 'r') as f:
+        # Create a CSV reader object
+        csv_reader = csv.reader(f)
+
+        # Read the header (first row) to get the column names
+        csv_header = next(csv_reader)
+
+    # Print the header (column names)
+    print("Header (Column Names):", csv_header)
+
+    schema = []
+
     # Check schema type
     if 'fix_ind' in filename:
         schema_path = 'schemas/fix_ind_schema.json'
@@ -117,39 +131,25 @@ def main():
     # Load schema json
     with open(schema_path, 'r') as f:
         schema_json = json.load(f)
-
-    # Open the CSV file
-    with open(f'{filename}.csv', 'r') as f:
-        # Create a CSV reader object
-        csv_reader = csv.reader(f)
-
-    # Read the header (first row) to get the column names
-    csv_header = next(csv_reader)
-
-    # Print the header (column names)
-    print("Header (Column Names):", csv_header)
-
-    schema = []
-
-    # Iterate through varnames
-    # Start at index 1 to skip row number column
-    for varname in csv_header[1:]:
-        vartype = [item['type'] for item in schema_json if item['name'] == varname]
-        
-        # Catch missing varname
-        if not vartype:
-            print(f'Name "{varname}" not found in the data')
-            raise Exception()
-        
-        # Add schema field following this format
-        # From https://cloud.google.com/bigquery/docs/schemas#python
-        '''
-        schema=[
-            bigquery.SchemaField("name", "STRING"),
-            bigquery.SchemaField("post_abbr", "STRING"),
-        ]
-        '''
-        schema.append(bigquery.SchemaField(varname, vartype))
+        # Iterate through varnames
+        # Start at index 1 to skip row number column
+        for varname in csv_header[1:]:
+            vartype = [item['type'] for item in schema_json if item['name'] == varname]
+            
+            # Catch missing varname
+            if not vartype:
+                print(f'Name "{varname}" not found in the data')
+                raise Exception()
+            
+            # Add schema field following this format
+            # From https://cloud.google.com/bigquery/docs/schemas#python
+            '''
+            schema=[
+                bigquery.SchemaField("name", "STRING"),
+                bigquery.SchemaField("post_abbr", "STRING"),
+            ]
+            '''
+            schema.append(bigquery.SchemaField(varname, vartype))
 
     print('Schema is: ', schema)
 
