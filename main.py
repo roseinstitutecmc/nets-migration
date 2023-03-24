@@ -165,7 +165,7 @@ def main():
             ]
             '''
             schema.append(bigquery.SchemaField(varname, vartype))
-            schema_print.append(varname, vartype)
+            schema_print.append((varname, vartype))
 
     print('Schema is: ', schema_print)
 
