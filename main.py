@@ -7,6 +7,7 @@ import os
 import pandas as pd
 import psutil
 #import pyreadstat
+import random
 import sys
 import time
 import traceback
@@ -25,6 +26,10 @@ def log_memory_usage(when):
 
 
 def main():
+    # Random sleep to stagger start. Multiply by task index % 10
+    sleep_time = random.uniform(1, 5) * (int(TASK_INDEX) % 10)
+    print(f'Sleeping for {sleep_time} seconds...')
+    time.sleep(sleep_time)
     log_memory_usage('Initial')
     # Box Client
     auth = OAuth2(
