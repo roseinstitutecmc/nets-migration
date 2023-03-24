@@ -164,7 +164,7 @@ def main():
         for col in int_columns:
             if col in chunk.columns:
                 # Replace NaN with placeholder value -1 so can convert col to int
-                chunk[col] = chunk[col].fillna(-1).astype(int)
+                chunk[col] = chunk[col].fillna(-1).astype(pd.Int64Dtype())
         # Replace placeholder with NaN
         chunk = chunk.replace(-1, np.nan)
         print(f'Converted Chunk {i}:')
@@ -207,6 +207,7 @@ def main():
     )
 
     with open(f'{filename}.csv', "rb") as source_file:
+        # TODO print first two rows to debug, but looks like not needed
         job = bqclient.load_table_from_file(source_file, table_id, job_config=job_config)
 
     job.result()  # Waits for the job to complete.
