@@ -153,8 +153,6 @@ def main():
     header_columns = None
     i = 0
     for chunk in chunks:
-        print(f'Original Chunk {i}:')
-        print(chunk.head(5))
         # Get the column names from the first chunk
         if header_columns is None:
             header_columns = list(chunk.columns)
@@ -169,12 +167,9 @@ def main():
         chunk = chunk.replace(-1, np.nan)
         # Replace remaining '.' values with empty string
         chunk = chunk.replace('.', '')
-        print(f'Converted Chunk {i}:')
-        print(chunk.head(5))
         # Process the chunk and write it to the CSV file
         chunk.to_csv((f'{filename}.csv'), header=header, mode='a', index=False)
         header = False
-        log_memory_usage(f"Chunk {i}")
         i += 1
 
     '''
