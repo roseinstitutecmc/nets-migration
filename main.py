@@ -149,7 +149,7 @@ def main():
         # Iterate through varnames
         # Start at index 1 to skip row number column
         for varname in csv_header[1:]:
-            vartype = [item['type'] for item in schema_json if item['name'] == varname]
+            vartype = [item['type'] for item in schema_json if item['name'] == varname][0]
             
             # Catch missing varname
             if not vartype:
