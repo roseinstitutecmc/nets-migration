@@ -1,5 +1,6 @@
 from boxsdk import Client, OAuth2
 from boxsdk.exception import BoxAPIException
+import csv
 from google.cloud import bigquery
 import json
 import os
@@ -106,14 +107,52 @@ def main():
     # TODO(developer): Set table_id to the ID of the table to create.
     table_id = f"rosenets.nets_import.{filename.split('.')[0]}"
 
-    # To load a schema file use the schema_from_json method.
-    # From https://cloud.google.com/bigquery/docs/schemas#python_1
+    # Manually specify schema
+    # Check schema type
     if 'fix_ind' in filename:
         schema_path = 'schemas/fix_ind_schema.json'
     else:
         schema_path = 'schemas/CA_schema.json'
     
-    schema = bqclient.schema_from_json(schema_path)
+    # Load schema json
+    with open(schema_path, 'r') as f:
+        schema_json = json.load(f)
+
+    # Open the CSV file
+    with open(f'{filename}.csv', 'r') as f:
+        # Create a CSV reader object
+        csv_reader = csv.reader(f)
+
+    # Read the header (first row) to get the column names
+    csv_header = next(csv_reader)
+
+    # Print the header (column names)
+    print("Header (Column Names):", csv_header)
+
+    schema = []
+
+    # Iterate through varnames
+    # Start at index 1 to skip row number column
+    for varname in csv_header[1:]:
+        vartype = [item['type'] for item in schema_json if item['name'] == varname]
+        
+        # Catch missing varname
+        if not vartype:
+            print(f'Name "{varname}" not found in the data')
+            raise Exception()
+        
+        # Add schema field following this format
+        # From https://cloud.google.com/bigquery/docs/schemas#python
+        '''
+        schema=[
+            bigquery.SchemaField("name", "STRING"),
+            bigquery.SchemaField("post_abbr", "STRING"),
+        ]
+        '''
+        schema.append(bigquery.SchemaField(varname, vartype))
+
+    print('Schema is: ', schema)
+
 
     job_config = bigquery.LoadJobConfig(
         source_format=bigquery.SourceFormat.CSV, skip_leading_rows=1, schema=schema,
