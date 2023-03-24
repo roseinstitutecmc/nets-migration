@@ -25,59 +25,6 @@ def log_memory_usage(when):
     print(f"Memory usage {when}: {mem_info.rss / (1024 * 1024)} MB")
 
 
-def find_max_column_width(file_path):
-    max_widths = []
-
-    with open(file_path, 'r') as f:
-        reader = csv.reader(f)
-
-        for row in reader:
-            for i, column in enumerate(row):
-                # Initialize max_widths with the length of the first row's columns
-                if len(max_widths) <= i:
-                    max_widths.append(len(column))
-                else:
-                    # Update the max_widths list with the maximum length found for each column
-                    max_widths[i] = max(max_widths[i], len(column))
-
-    return max_widths
-
-
-def get_csv_shape(file_path):
-    num_rows = 0
-    num_columns = 0
-
-    with open(file_path, 'r') as f:
-        reader = csv.reader(f)
-
-        for row in reader:
-            num_rows += 1
-            
-            # Update the number of columns only for the first row
-            if num_rows == 1:
-                num_columns = len(row)
-
-    return num_rows, num_columns
-
-
-def is_csv_width_consistent(file_path):
-    num_columns = None
-
-    with open(file_path, 'r') as f:
-        reader = csv.reader(f)
-
-        for row in reader:
-            # Set num_columns to the length of the first row
-            if num_columns is None:
-                num_columns = len(row)
-            else:
-                # Check if the current row has the same number of columns as the first row
-                if len(row) != num_columns:
-                    return row
-
-    return None
-
-
 def main():
     # Random sleep to stagger start. Multiply by task index % 10
     sleep_time = random.uniform(1, 5) * (int(TASK_INDEX) % 10)
@@ -167,18 +114,6 @@ def main():
     df_end_time = time.time()
     df_time = df_end_time - df_start_time
     print('Converting took these many seconds:', df_time)
-
-    max_widths = find_max_column_width(f'{filename}.csv')
-    print("Maximum column widths:", max_widths)
-    rows, columns = get_csv_shape(f'{filename}.csv')
-    print(f"The CSV has {rows} rows and {columns} columns.")
-
-    inconsistent_row = is_csv_width_consistent(f'{filename}.csv')
-
-    if inconsistent_row is None:
-        print("The CSV width is consistent")
-    else:
-        print("The CSV width is inconsistent. The first inconsistent row is:", inconsistent_row)
     
     print('Uploading csv to BigQuery')
 
