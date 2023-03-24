@@ -19,7 +19,7 @@ TASK_ATTEMPT = os.getenv("CLOUD_RUN_TASK_ATTEMPT", 0)
 # Retrieve User-defined env vars
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", 0)
 # Set version
-VERSION = 'v0.1'
+VERSION = 'v0.2'
 
 # Specify INT columns
 with open('schemas/fix_ind_schema.json', 'r') as f:
