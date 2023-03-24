@@ -18,11 +18,60 @@ TASK_ATTEMPT = os.getenv("CLOUD_RUN_TASK_ATTEMPT", 0)
 # Retrieve User-defined env vars
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", 0)
 
+# Specify INT columns
+with open('schemas/fix_ind_schema.json', 'r') as f:
+    schema_json = json.load(f)
+    int_columns = [item['name'] for item in schema_json if item['type'] == 'INTEGER']
+with open('schemas/CA_schema.json', 'r') as f:
+    schema_json = json.load(f)
+    int_columns += [item['name'] for item in schema_json if item['type'] == 'INTEGER']
 
 def log_memory_usage(when):
     process = psutil.Process(os.getpid())
     mem_info = process.memory_info()
     print(f"Memory usage {when}: {mem_info.rss / (1024 * 1024)} MB")
+
+
+def get_schema(header_columns, filename):
+    # Manually specify schema
+
+    # Print the header (column names)
+    print("Header (Column Names):", header_columns)
+
+    schema = []
+    schema_print = []
+
+    # Check schema type
+    if 'fix_ind' in filename:
+        schema_path = 'schemas/fix_ind_schema.json'
+    else:
+        schema_path = 'schemas/CA_schema.json'
+    
+    # Load schema json
+    with open(schema_path, 'r') as f:
+        schema_json = json.load(f)
+        # Iterate through varnames
+        for varname in header_columns:
+            vartype = [item['type'] for item in schema_json if item['name'] == varname][0]
+            
+            # Catch missing varname
+            if not vartype:
+                print(f'Name "{varname}" not found in the data')
+                raise Exception()
+            
+            # Add schema field following this format
+            # From https://cloud.google.com/bigquery/docs/schemas#python
+            '''
+            schema=[
+                bigquery.SchemaField("name", "STRING"),
+                bigquery.SchemaField("post_abbr", "STRING"),
+            ]
+            '''
+            schema.append(bigquery.SchemaField(varname, vartype))
+            schema_print.append((varname, vartype))
+
+    print('Schema is: ', schema_print)
+    return schema
 
 
 def main():
@@ -96,6 +145,10 @@ def main():
         # Get the column names from the first chunk
         if header_columns is None:
             header_columns = list(chunk.columns)
+        # Convert the specified columns from float to int
+        for col in int_columns:
+            if col in chunk.columns:
+                chunk[col] = chunk[col].fillna(0).astype(int)
         # Process the chunk and write it to the CSV file
         chunk.to_csv((f'{filename}.csv'), header=header, mode='a', index=False)
         header = False
@@ -126,44 +179,7 @@ def main():
     # TODO(developer): Set table_id to the ID of the table to create.
     table_id = f"rosenets.nets_import.{filename.split('.')[0]}"
 
-    # Manually specify schema
-
-    # Print the header (column names)
-    print("Header (Column Names):", header_columns)
-
-    schema = []
-    schema_print = []
-
-    # Check schema type
-    if 'fix_ind' in filename:
-        schema_path = 'schemas/fix_ind_schema.json'
-    else:
-        schema_path = 'schemas/CA_schema.json'
-    
-    # Load schema json
-    with open(schema_path, 'r') as f:
-        schema_json = json.load(f)
-        # Iterate through varnames
-        for varname in header_columns:
-            vartype = [item['type'] for item in schema_json if item['name'] == varname][0]
-            
-            # Catch missing varname
-            if not vartype:
-                print(f'Name "{varname}" not found in the data')
-                raise Exception()
-            
-            # Add schema field following this format
-            # From https://cloud.google.com/bigquery/docs/schemas#python
-            '''
-            schema=[
-                bigquery.SchemaField("name", "STRING"),
-                bigquery.SchemaField("post_abbr", "STRING"),
-            ]
-            '''
-            schema.append(bigquery.SchemaField(varname, vartype))
-            schema_print.append((varname, vartype))
-
-    print('Schema is: ', schema_print)
+    schema = get_schema(header_columns, filename)
 
 
     job_config = bigquery.LoadJobConfig(
