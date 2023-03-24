@@ -77,10 +77,30 @@ def get_schema(header_columns, filename):
     return schema
 
 
+def update_with_dml(bqclient, project_id, file_id, update_type=None):
+    if update_type not in ['start', 'end']:
+        raise TypeError('Wrong update_type passed to update dml')
+    # Update the index with the in-progress process
+    update_sql = f"""
+    UPDATE `rosenets.nets_import.index`
+    SET {update_type}_id = '{VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}', {update_type}_time = {math.floor(time.time())}
+    WHERE file_id = '{file_id}' AND add_time IS NOT NULL
+    """
+
+    update_job = bqclient.query(update_sql, project=project_id)
+
+    # Wait for job to finish
+    update_job.result()
+
+    assert update_job.num_dml_affected_rows is not None
+
+    print(f"DML update_{update_type} query modified {update_job.num_dml_affected_rows} rows.")
+
+
 def main():
     # Random sleep to stagger start. Multiply by task index % 10
-    sleep_time = random.uniform(1, 5) * (int(TASK_INDEX) % 10)
-    print(f'Sleeping for {sleep_time} seconds...')
+    sleep_time = random.uniform(1, 10) * (int(TASK_INDEX) % 10)
+    print(f'Task {TASK_INDEX} sleeping for {sleep_time} seconds...')
     time.sleep(sleep_time)
     log_memory_usage('Initial')
     # Box Client
@@ -109,21 +129,7 @@ def main():
 
     file_id = query_df['file_id'][0]
 
-    # Update the index with the in-progress process
-    update_begin_sql = f"""
-    UPDATE `rosenets.nets_import.index`
-    SET start_id = '{VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}', start_time = {math.floor(time.time())}
-    WHERE file_id = '{file_id}' AND add_time IS NOT NULL
-    """
-
-    update_begin_job = bqclient.query(update_begin_sql, project=project_id)
-
-    # Wait for job to finish
-    update_begin_job.result()
-
-    assert update_begin_job.num_dml_affected_rows is not None
-
-    print(f"DML update_begin query modified {update_begin_job.num_dml_affected_rows} rows.")
+    update_with_dml(bqclient, project_id, file_id, update_type='start')
 
     try:
         # From https://github.com/box/box-python-sdk/blob/main/docs/usage/files.md#download-a-file
@@ -217,20 +223,7 @@ def main():
     )
 
     # Update the index with finished process
-    update_finish_sql = f"""
-    UPDATE `rosenets.nets_import.index`
-    SET end_id = '{VERSION}-{TASK_INDEX}.{TASK_ATTEMPT}', end_time = {math.floor(time.time())}
-    WHERE file_id = '{file_id}' AND add_time IS NOT NULL
-    """
-
-    update_finish_job = bqclient.query(update_finish_sql, project=project_id)
-
-    # Wait for job to finish
-    update_finish_job.result()
-
-    assert update_finish_job.num_dml_affected_rows is not None
-
-    print(f"DML update_finish query modified {update_finish_job.num_dml_affected_rows} rows.")
+    update_with_dml(bqclient, project_id, file_id, update_type='end')
 
 
 # Start script
