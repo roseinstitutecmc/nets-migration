@@ -10,6 +10,7 @@ import psutil
 #import pyreadstat
 import random
 import sys
+from tenacity import retry, stop_after_attempt, wait_exponential
 import time
 import traceback
 
@@ -19,7 +20,7 @@ TASK_ATTEMPT = os.getenv("CLOUD_RUN_TASK_ATTEMPT", 0)
 # Retrieve User-defined env vars
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", 0)
 # Set version
-VERSION = 'v0.2'
+VERSION = 'v0.3'
 
 # Specify INT columns
 with open('schemas/fix_ind_schema.json', 'r') as f:
@@ -76,7 +77,7 @@ def get_schema(header_columns, filename):
     print('Schema is: ', schema_print)
     return schema
 
-
+@retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=10, max=60))
 def update_with_dml(bqclient, project_id, file_id, update_type=None):
     if update_type not in ['start', 'end']:
         raise TypeError('Wrong update_type passed to update dml')
